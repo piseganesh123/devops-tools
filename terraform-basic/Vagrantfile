@@ -15,8 +15,8 @@ MASTER_IP_START = 1
 NODE_IP_START = 2
 
 Vagrant.configure(2) do |config|
-
-  # Kubernetes Master Server
+  config.vm.provision "shell", path: "tf-bootstrap-config.sh"
+  # Terraform Master Server
   config.vm.define "kmaster" do |node|
   
     node.vm.box               = VAGRANT_BOX
