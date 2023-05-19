@@ -10,11 +10,11 @@ install_tf_supp_tools() {
 
   wget -O- https://apt.releases.hashicorp.com/gpg | \
   gpg --dearmor | \
-  sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+  sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg >/dev/null 2>&1
 
   sudo gpg --no-default-keyring \
   --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
-  --fingerprint
+  --fingerprint >/dev/null 2>&1
 
   # === Add hashicorp repo
   echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
