@@ -40,13 +40,12 @@ install_aws_cli_tools()
 }
 
 main() {
-  echo "=========== In main support tool install function =========="
   # == install supporting tools like docker
   install_tf_supp_tools
   install_aws_cli_tools
   install-terraform
   terraform -v
-  echo "=== done with terraform installation installation ==="
+  echo "=== done with terraform installation ==="
 }
 
 main "$@"
