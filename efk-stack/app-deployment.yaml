@@ -30,6 +30,6 @@ spec:
       containers:
       - name: log-simon
         image: piseganesh123/java-demo-app:1.2.0
-        imagePullPolicy: always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
