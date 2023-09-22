@@ -392,8 +392,8 @@ config:
   outputs: |
     [OUTPUT]
         Name http
-        Match kube.*
-        Host <data-prepper-host-ip>
+        Match *
+        Host <data-prepper-host-ip>       
         Port 2021
         URI /log/ingest
         Format json
