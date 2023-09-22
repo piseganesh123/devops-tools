@@ -58,7 +58,7 @@ install_supp_tools() {
   sudo apt-get install openssl, jq, bash-completion -y
   echo "=== Installed supporting tools on master node ==="
   #===== install helm
-  snap install --channel=3.7 helm --classic >/dev/null 2>&1
+  sudo snap install --channel=3.7 helm --classic >/dev/null 2>&1
 }
 
 deploy_network() {
