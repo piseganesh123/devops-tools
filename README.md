@@ -1,2 +1,2 @@
-# devops-tool-env
-Baseline environment for common DevOps tools
+# Code for common devops tools
+Tools i.e. Prometheus, Grafana, opensearch, fluentbit
