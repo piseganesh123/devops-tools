@@ -2,7 +2,7 @@ version: '3'
 services:
   prometheus:
     container_name: prometheus
-    image: prom/prometheus:v2.39.1
+    image: prom/prometheus:v2.50.0
     ports:
       - 9000:9090
     volumes:
@@ -12,7 +12,7 @@ services:
 
   grafana:
     container_name: grafana
-    image: grafana/grafana:9.2.1
+    image: grafana/grafana:10.0.12
     ports:
       - 3000:3000
     restart: unless-stopped
