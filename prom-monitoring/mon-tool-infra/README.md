@@ -18,3 +18,9 @@ http://host-machine-ip:3000
 access prometues using 
 
 http://host-machine-ip:9000
+
+WIth Kuberntes and helm installed 
+
+ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm repo update
+
+ helm install monitoring-demo prometheus-community/kube-prometheus-stack
