@@ -64,38 +64,38 @@ services:
       opensearch-node1:
         condition: service_healthy
 
-  otel-collector:
-    container_name: otel-collector
-    image: otel/opentelemetry-collector:0.62.1 
-    command: ['--config=/etc/otel-collector-config.yaml']
-    volumes:
-      - ./configs/otel-collector.yaml:/etc/otel-collector-config.yaml
-    ports:
-      - '4318:4318' #OTLP receiver
-      - '4317:4317' #OTLP receiver GRPC
-      - '13133:13133' #health_check extension
-    networks:
-      - observability-net
-    depends_on:
-      opensearch-node1:
-        condition: service_started
-      data-prepper:
-        condition: service_started
+#  otel-collector:
+#    container_name: otel-collector
+#    image: otel/opentelemetry-collector:0.62.1 
+#    command: ['--config=/etc/otel-collector-config.yaml']
+#    volumes:
+#      - ./configs/otel-collector.yaml:/etc/otel-collector-config.yaml
+#    ports:
+#      - '4318:4318' #OTLP receiver
+#      - '4317:4317' #OTLP receiver GRPC
+#      - '13133:13133' #health_check extension
+#    networks:
+#      - observability-net
+#    depends_on:
+#      opensearch-node1:
+#        condition: service_started
+#      data-prepper:
+#        condition: service_started
   
-  fluentbit:
-    container_name: fluentbit
-    image: fluent/fluent-bit:1.9.9
-    ports:
-      - "24224:24224"
-      - "24224:24224/udp"
-    volumes:
-      - ./configs/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
-      - ./configs/parsers.conf:/fluent-bit/etc/parsers.conf
-    networks:
-      - observability-net
-    depends_on:
-      - opensearch-node1
-      - data-prepper
+#  fluentbit:
+#    container_name: fluentbit
+#    image: fluent/fluent-bit:1.9.9
+#    ports:
+#      - "24224:24224"
+#      - "24224:24224/udp"
+#    volumes:
+#      - ./configs/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+#      - ./configs/parsers.conf:/fluent-bit/etc/parsers.conf
+#    networks:
+#      - observability-net
+#    depends_on:
+#      - opensearch-node1
+#      - data-prepper
       
 volumes:
   opensearch-data1:
