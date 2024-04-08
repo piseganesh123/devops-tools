@@ -19,7 +19,7 @@ access prometues using
 
 http://host-machine-ip:9000
 
-WIth Kuberntes and helm installed 
+# Configure Grafana and Prometheus using Kuberntes and helm chart
 
  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm repo update
 
