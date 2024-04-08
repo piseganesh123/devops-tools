@@ -1,4 +1,4 @@
-# Starts Prometheus Grafana applications using their container images and docker-compose
+# Prometheus Grafana applications using container images and docker-compose
 
 pre-requisite
  - Docker, Docker-compose installed already - refer - https://github.com/piseganesh123/k8s-installation/tree/main/labenv-doc-compose
