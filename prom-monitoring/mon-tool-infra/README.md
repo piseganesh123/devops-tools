@@ -21,6 +21,6 @@ http://host-machine-ip:9000
 
 # Configure Grafana and Prometheus using Kuberntes and helm chart
 
- helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm repo update
+ - helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm repo update
 
- helm install monitoring-demo prometheus-community/kube-prometheus-stack
+ - helm install monitoring-demo prometheus-community/kube-prometheus-stack
